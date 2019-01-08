@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NavParams, NavController } from '@ionic/angular';
+import {items} from "../../assets/json/example.json";
+import { TodoService } from '../services/todo.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +9,6 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  constructor (public todoService: TodoService){}
 }
+
